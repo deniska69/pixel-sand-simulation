@@ -1,7 +1,7 @@
-import { FunctionComponent, PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 import "./UI.css";
 
-const HStack: FunctionComponent<PropsWithChildren> = ({ children }) => (
+const HStack: FC<PropsWithChildren> = ({ children }) => (
   <div className="hstack">{children}</div>
 );
 
