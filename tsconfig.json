@@ -25,7 +25,8 @@
     "paths": {
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
-      "constants/*": ["constants/*"]
+      "constants/*": ["constants/*"],
+      "ui": ["ui"]
     }
   },
   "include": ["src"],
