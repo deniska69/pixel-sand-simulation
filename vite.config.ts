@@ -5,4 +5,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/pixel-sand-simulation",
+  resolve: {
+    alias: {
+      assets: "/src/assets",
+      components: "/src/components",
+      constants: "/src/constants",
+    },
+  },
 });
