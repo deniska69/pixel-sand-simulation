@@ -1,5 +1,5 @@
-const isNumeric = (value: unknown): boolean => {
+const isNumber = (value: unknown): boolean => {
   return !isNaN(Number(value));
 };
 
-export { isNumeric };
+export { isNumber };
