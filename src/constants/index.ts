@@ -1,3 +1,3 @@
-import { CANVAS_SIZE } from "./Size";
+import { CANVAS_SIZE, GRID } from "./Config";
 
-export { CANVAS_SIZE };
+export { CANVAS_SIZE, GRID };
