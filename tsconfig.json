@@ -26,6 +26,7 @@
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
       "constants/*": ["constants/*"],
+      "helpers/*": ["helpers/*"],
       "ui": ["ui"]
     }
   },
