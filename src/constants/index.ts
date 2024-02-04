@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-duplicate-enum-values */
 const enum GRID {
   countRows = 15,
-  countColumns = 9,
+  countColumns = 15,
   cellWidthAndHeigth = 30,
 }
 

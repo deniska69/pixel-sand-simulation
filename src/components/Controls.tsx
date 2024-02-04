@@ -4,14 +4,14 @@ import { GRID, CANVAS_SIZE } from "constants";
 import { isNumber } from "helpers";
 import { DrawConfig } from "types";
 
-const MAX_ROWS = Math.floor(CANVAS_SIZE.height / GRID.cellWidthAndHeigth);
-const MAX_COLUMNS = Math.floor(CANVAS_SIZE.height / GRID.cellWidthAndHeigth);
+const MAX_ROWS = Math.floor(CANVAS_SIZE.height / GRID.cellWidthAndHeigth) - 7;
+const MAX_COLUMNS = Math.floor(CANVAS_SIZE.width / GRID.cellWidthAndHeigth) - 7;
 
-interface ControlsProps {
+interface IControlsProps {
   onChangeDrawConfig: (config: DrawConfig) => void;
 }
 
-const Controls: FC<ControlsProps> = (props) => {
+const Controls: FC<IControlsProps> = (props) => {
   const { onChangeDrawConfig } = props;
 
   const [countRows, setCountRows] = useState<number>(GRID.countRows);
@@ -29,11 +29,19 @@ const Controls: FC<ControlsProps> = (props) => {
     setCountColumns(Number(value));
   };
 
-  const onClick = () =>
+  const onClick = () => {
+    const _countRows = countRows < MAX_ROWS ? countRows : MAX_ROWS;
+    const _countColumns =
+      countColumns < MAX_COLUMNS ? countColumns : MAX_COLUMNS;
+
+    setCountRows(_countRows);
+    setCountColumns(_countColumns);
+
     onChangeDrawConfig({
-      countRows: countRows < MAX_ROWS ? countRows : MAX_ROWS,
-      countColumns: countColumns < MAX_COLUMNS ? countColumns : MAX_COLUMNS,
+      countRows: _countRows,
+      countColumns: _countColumns,
     });
+  };
 
   return (
     <Stack>
