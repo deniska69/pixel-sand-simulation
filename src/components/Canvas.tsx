@@ -2,6 +2,7 @@ import { useEffect, useRef, FC, useCallback } from "react";
 import "./Canvas.css";
 import { CANVAS_SIZE, GRID } from "constants";
 import { clearCanvas, drawCell } from "helpers";
+import DebugPanel from "./DebugPanel";
 
 interface ICanvasProps {
   countRows: number;
@@ -61,7 +62,12 @@ const Canvas: FC<ICanvasProps> = (props) => {
     if (countRows && countColumns) drawGrid(context, countRows, countColumns);
   }, [countRows, countColumns, drawGrid]);
 
-  return <canvas ref={canvasRef} width={width} height={height} />;
+  return (
+    <>
+      <DebugPanel />
+      <canvas ref={canvasRef} width={width} height={height} />
+    </>
+  );
 };
 
 export default Canvas;

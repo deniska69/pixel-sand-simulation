@@ -1,0 +1,21 @@
+.debug-wrap {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 0.7rem;
+  padding: 2px;
+  border-radius: 5px;
+  color: white;
+}
+
+.debug-wrap-on {
+  min-width: 150px;
+}
+
+.debug-wrap-off {
+  min-width: 100px;
+}
