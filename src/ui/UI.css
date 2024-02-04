@@ -9,3 +9,17 @@
   flex-direction: row;
   column-gap: 1rem;
 }
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 0.2rem;
+}
+
+.checkbox,
+.checkbox > input,
+.checkbox > label {
+  cursor: pointer;
+}
