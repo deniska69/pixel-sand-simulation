@@ -12,7 +12,10 @@ const App = () => {
 
   return (
     <HStack>
-      <Canvas />
+      <Canvas
+        countRows={drawConfig?.countRows || 0}
+        countColumns={drawConfig?.countColumns || 0}
+      />
       <Controls onChangeDrawConfig={onChangeDrawConfig} />
     </HStack>
   );
