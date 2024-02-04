@@ -25,8 +25,9 @@
     "paths": {
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
-      "constants/*": ["constants/*"],
-      "helpers/*": ["helpers/*"],
+      "constants": ["constants"],
+      "helpers": ["helpers"],
+      "types": ["types"],
       "ui": ["ui"]
     }
   },

@@ -11,6 +11,7 @@ export default defineConfig({
       components: "/src/components",
       constants: "/src/constants",
       helpers: "/src/helpers",
+      types: "/src/types",
       ui: "/src/ui",
     },
   },
